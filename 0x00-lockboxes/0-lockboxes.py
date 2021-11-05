@@ -23,7 +23,7 @@ def check_boxes(checked, keys, boxes):
 
     for key in keys:
         if key not in checked:
-            new_keys = new_keys + boxes[key]
+            new_keys = list(set(new_keys + boxes[key]))
             checked.append(key)
 
     return checked, new_keys
@@ -44,11 +44,9 @@ def canUnlockAll(boxes):
     checked = [0]
 
     if type(keys) is not list or len(keys) == 0:
-        return True
+        return False
 
-    for x in range(len(boxes)):
-        if x in checked:
-            continue
+    while True:
 
         checked, keys = check_boxes(checked, keys, boxes)
 
