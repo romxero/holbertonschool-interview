@@ -40,6 +40,10 @@ def canUnlockAll(boxes):
        Return:
          True, else False
     """
+
+    if type(boxes) is not list or len(boxes) == 0:
+        return False
+
     keys = boxes[0]
     checked = [0]
 
