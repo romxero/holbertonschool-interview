@@ -22,7 +22,7 @@ def check_boxes(checked, keys, boxes):
     new_keys = []
 
     for key in keys:
-        if key not in checked:
+        if key not in checked and key < len(boxes):
             new_keys = list(set(new_keys + boxes[key]))
             checked.append(key)
 
