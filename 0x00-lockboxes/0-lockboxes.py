@@ -44,7 +44,7 @@ def canUnlockAll(boxes):
     checked = [0]
 
     if type(keys) is not list or len(keys) == 0:
-        return False
+        return True
 
     for x in range(len(boxes)):
         if x in checked:
