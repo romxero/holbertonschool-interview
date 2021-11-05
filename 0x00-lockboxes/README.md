@@ -21,6 +21,8 @@ boxes = [[1, 4], [2], [0, 4, 1], [3], [], [4, 1], [5, 6]]
 print(canUnlockAll(boxes))
 ```
 
-> True\n
-> True\n
+> True
+
+> True
+
 > False
