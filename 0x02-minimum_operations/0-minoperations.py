@@ -43,5 +43,4 @@ def minOperations(n):
         if ops is not None:
             operations.append(ops)
 
-    print(operations)
     return sum(operations)
