@@ -93,7 +93,7 @@ int check_stability(int grid[3][3])
  */
 static void print_grid(int grid[3][3])
 {
-    int i, j;
+	int i, j;
 	int stable = check_stability(grid);
 
 	if (stable == 0)
