@@ -14,9 +14,9 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
 	int i, j;
 
-	for (i=0; i<3; i++)
+	for (i = 0; i < 3; i++)
 	{
-		for (j=0; j<3; j++)
+		for (j = 0; j < 3; j++)
 		{
 			grid1[i][j] = grid1[i][j] + grid2[i][j];
 		}
@@ -39,9 +39,9 @@ int stabilize(int grid[3][3])
 
 	print_grid(grid);
 
-	for (i=0; i<3; i++)
+	for (i = 0; i < 3; i++)
 	{
-		for (j=0; j<3; j++)
+		for (j = 0; j < 3; j++)
 		{
 			if (grid[i][j] < 4)
 				continue;
@@ -51,17 +51,17 @@ int stabilize(int grid[3][3])
 			grid[i][j] -= 4;
 
 			if (i - 1 >= 0)
-				grid[i-1][j] += 1;
+				grid[i - 1][j] += 1;
 			if (i + 1 <= 2)
-				grid[i+1][j] += 1;
-			if (j-1 >= 0)
-				grid[i][j-1] += 1;
-			if (j+1 <= 2)
-				grid[i][j+1] += 1;
+				grid[i + 1][j] += 1;
+			if (j - 1 >= 0)
+				grid[i][j - 1] += 1;
+			if (j + 1 <= 2)
+				grid[i][j + 1] += 1;
 		}
 	}
 
-	return(stable);
+	return (stable);
 }
 
 /**
@@ -74,16 +74,16 @@ int check_stability(int grid[3][3])
 {
 	int i, j;
 
-	for (i=0; i<3; i++)
+	for (i = 0; i < 3; i++)
 	{
-		for (j=0; j<3; j++)
+		for (j = 0; j < 3; j++)
 		{
 			if (grid[i][j] >= 4)
-				return(0);
+				return (0);
 		}
 	}
 
-	return(1);
+	return (1);
 }
 
 /**
